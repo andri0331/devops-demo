@@ -164,6 +164,9 @@ workflows:
             - test
             - snyk_scan
             - snyk_code
+      - deploy:
+          requires:
+            - publish
       - notify:
           name: notify-success
           result: success
